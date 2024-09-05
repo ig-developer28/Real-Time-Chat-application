@@ -1,0 +1,10 @@
+Web socket is a two way connection between the server and the client.
+Whenever server encounters any update it forward it without any 
+request to the client(an example of http long polling in which the http connection b/w
+the client and the server is kept open until the client disconnects) and similar from the client side.
+
+You dont have to make frequent requests to the server as in 
+http if you use socket programming.
+
+when a web socket connection is established the server responds when new data is available or a timeout is reached. The client then sends a new request(or emits event) to the server(and the server receives the event), and the cycle repeats. 
+For more info visit socketIO documentation a nodejs package.
